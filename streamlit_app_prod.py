@@ -6,7 +6,6 @@ import numpy as np
 import pandas as pd
 from scipy.stats import iqr, skew, kurtosis
 import streamlit as st
-import gc
 import re
 import warnings
 import time
@@ -459,10 +458,6 @@ def treebased_shap(X, model, feature_names):
 
     return fig
 
-
-
-
-gc.collect()
 
 #################################################################################################
 # Streamlit Application
