@@ -1,0 +1,17 @@
+joblib
+regex
+nltk
+numpy
+pandas
+scipy
+streamlit
+gc
+re
+warnings
+time
+textstat
+spellchecker
+shap
+matplotlib
+seaborn
+threading
