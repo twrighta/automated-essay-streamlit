@@ -21,7 +21,7 @@ warnings.simplefilter('ignore')
 #################################################################################################################
 
 # Load in submission model and required transformers from directory
-model_url = 'https://github.com/twrighta/automated-essay-streamlit/blob/main/trained_model_v2.joblib'
+model_url = 'trained_model_v2.joblib'
 tfidf_url = 'tfidf_v2.joblib'
 svd_url = 'svd_v2.joblib'
 scaler_url = 'robust_scaler_v2.joblib'
