@@ -10,3 +10,4 @@ pyspellchecker
 shap
 matplotlib
 seaborn
+lightgbm
