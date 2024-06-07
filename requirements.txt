@@ -11,3 +11,4 @@ shap
 matplotlib
 seaborn
 lightgbm
+catboost
