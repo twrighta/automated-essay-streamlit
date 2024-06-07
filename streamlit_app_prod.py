@@ -21,10 +21,10 @@ warnings.simplefilter('ignore')
 #################################################################################################################
 
 # Load in submission model and required transformers from directory
-model_url = 'C:/Users/tomwr/Datascience/supervised_classification/Essay Scoring Streamlit/trained_model_v2.joblib'
-tfidf_url = 'C:/Users/tomwr/Datascience/supervised_classification/Essay Scoring Streamlit/tfidf_v2.joblib'
-svd_url = 'C:/Users/tomwr/Datascience/supervised_classification/Essay Scoring Streamlit/svd_v2.joblib'
-scaler_url = 'C:/Users/tomwr/Datascience/supervised_classification/Essay Scoring Streamlit/robust_scaler_v2.joblib'
+model_url = 'trained_model_v2.joblib'
+tfidf_url = 'tfidf_v2.joblib'
+svd_url = 'svd_v2.joblib'
+scaler_url = 'robust_scaler_v2.joblib'
 
 model = jl.load(model_url)
 tfidf = jl.load(tfidf_url)
