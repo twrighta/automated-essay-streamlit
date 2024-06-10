@@ -35,8 +35,6 @@ warnings.simplefilter('ignore')
 #################################################################################################################
 
 # Load in submission model and required transformers from directory
-#model_local_path = 'trained_model_v2.joblib'
-#model_download_url = 'https://drive.google.com/uc?export=download&id=13QF-QF5b5o6N16z3E4nTZw7NrFEcL8dN'
 model_download_url = 'https://drive.google.com/file/d/13QF-QF5b5o6N16z3E4nTZw7NrFEcL8dN/view?usp=drive_link'
 tfidf_url = 'tfidf_v2.joblib'
 svd_url = 'svd_v2.joblib'
@@ -53,16 +51,17 @@ def load_pretrained(tfidf_url, svd_url, scaler_url, model_download_url):
     scaler = jl.load(scaler_url)
 
 
-    #Download model with gdown
+    # Download model with gdown
     downloaded = gdown.cached_download(model_download_url, 'trained_model_v2.joblib')
     print(f'downloaded: {downloaded}')
-    #Download joblib model
+    # Download joblib model - deserializing the model
     model = jl.load(downloaded)
 
     return tfidf, svd, scaler, model
 
 tfidf, svd, scaler, model = load_pretrained(tfidf_url, svd_url, scaler_url, model_download_url)
 
+#print(tfidf, svd, scaler, model) # all exist
 
 # Preprocessing functions - these transform the text input into features in a dataframe to generate prediction from
 
@@ -506,9 +505,7 @@ def run_shap_calculation():
 
 
 st.set_option('deprecation.showPyplotGlobalUse', False) # Disable pyplot warning
-#st.set_page_config(page_title = 'Essay Grade Prediction',
-#                   layout = 'wide',
-#                   page_icon = ':game_die:')
+
 st.title('Predict an essay\'s grade using machine learning! :game_die:')
 st.subheader('Essays are graded 1-6, ranging from poor to outstanding')
 st.divider()
